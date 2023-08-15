@@ -24,7 +24,7 @@ namespace VideoAppCoreModels
             if(!optionsBuilder.IsConfigured)
             {
                 string connectionString = ConfigurationManager.ConnectionStrings[
-                    "ConnectionString"].ConnectionString;
+                    "DefaultConnection"].ConnectionString;
                 optionsBuilder.UseSqlServer(connectionString);
             }
         }

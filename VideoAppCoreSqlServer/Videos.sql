@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Table1]
+﻿CREATE TABLE [dbo].[Videos]
 (
 	[Id] INT NOT NULL identity(1,1) PRIMARY KEY
 	,Created DateTimeOffset(7) Default(SysDateTimeOffset() AT TIME ZONE 'Korea Standard Time')
