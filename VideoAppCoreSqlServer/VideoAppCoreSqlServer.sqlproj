@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>VidoeAppCoreSqlServer</Name>
+    <Name>VideoAppCoreSqlServer</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{3a9665c4-2419-4bf7-ac66-c75de1fd5230}</ProjectGuid>
+    <ProjectGuid>{10bcbf3c-2904-45b6-bdb2-b4ea1aa677c4}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
@@ -58,6 +58,6 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Viedos.sql" />
+    <Build Include="Videos.sql" />
   </ItemGroup>
 </Project>
