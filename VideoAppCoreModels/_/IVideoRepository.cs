@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace VideoAppCoreModels
+namespace VideoAppCoreModels._
 {
     /// <summary>
     /// [3] CRUD API 명세서 정의
