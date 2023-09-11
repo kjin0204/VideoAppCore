@@ -5,9 +5,11 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "VideoAppCoreSqlServer", "VideoAppCoreSqlServer\VideoAppCoreSqlServer.sqlproj", "{10BCBF3C-2904-45B6-BDB2-B4EA1AA677C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppCore", "VideoAppCore\VideoAppCore.csproj", "{E304A8D8-E9CC-477B-A83A-5E14BAFB26FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoAppCore", "VideoAppCore\VideoAppCore.csproj", "{E304A8D8-E9CC-477B-A83A-5E14BAFB26FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppCoreModels", "VideoAppCoreModels\VideoAppCoreModels.csproj", "{93DADDC5-7842-4D74-BCDD-FA9CB44AE7A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoAppCoreModels", "VideoAppCoreModels\VideoAppCoreModels.csproj", "{93DADDC5-7842-4D74-BCDD-FA9CB44AE7A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppCoreModels.Test", "VideoAppCoreModels.Test\VideoAppCoreModels.Test.csproj", "{2E2B47DD-15A6-4E40-BDA1-F8022FB1F787}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{93DADDC5-7842-4D74-BCDD-FA9CB44AE7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93DADDC5-7842-4D74-BCDD-FA9CB44AE7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93DADDC5-7842-4D74-BCDD-FA9CB44AE7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2B47DD-15A6-4E40-BDA1-F8022FB1F787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2B47DD-15A6-4E40-BDA1-F8022FB1F787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2B47DD-15A6-4E40-BDA1-F8022FB1F787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2B47DD-15A6-4E40-BDA1-F8022FB1F787}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
