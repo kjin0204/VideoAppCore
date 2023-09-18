@@ -1,0 +1,89 @@
+﻿@page "/Videos/Edit/{id}"
+
+
+@inject IVideoRepositoryAsync repository
+@inject IJSRuntime js
+@inject NavigationManager nav
+
+<h3>Edit</h3>
+
+
+<from>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>ID</label><br />
+                @video.Id
+                <hr />
+            </div>
+            <div class="form-group">
+                <label>TITLE</label><br />
+                <input type="text" @bind="@video.Title" />
+                <hr />
+            </div>
+            <div class="form-group">
+                <label>URL</label><br />
+                <input type="text" @bind="@video.Url" />
+                <hr />
+            </div>
+            <div class="form-group">
+                <label>NAME</label><br />
+                <input type="text" @bind="@video.Name" />
+                <hr />
+            </div>
+            <div class="form-group">
+                <label>CREATED</label><br />
+                @video.Created
+                <hr />
+            </div>
+            <div>
+                <input type="button" id="OnEditEvent" @onclick="OnEditEvent" value="Edit" />
+                <input type="button" id="OnGotoDelete" @onclick="OnGotoDelete" value="Delete" />
+                <input type="button" id="OnCancelEvent" @onclick="OnCancelEvent" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</from>
+
+@code {
+    Video video = new Video();
+    int id = 0;
+
+    [Parameter]
+    public string Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        id = int.Parse(Id);
+
+        video = await repository.GetVideoByIdAsync(id);
+    }
+
+    protected async Task OnEditEvent()
+    {
+        bool is_check = await js.InvokeAsync<bool>("confirm", "정말 수정 하시겠습니까??");
+
+
+        if (is_check)
+        {
+            await repository.UpdateVideoAsync(video);
+            nav.NavigateTo("/Videos/Index");
+
+        }
+        else
+        {
+            await js.InvokeAsync<object>("alert", "취소 되었습니다.");
+        }
+    }
+
+    protected void OnGotoDelete()
+    {
+        nav.NavigateTo($"/Videos/Delete/{Id}");
+    }
+
+    protected void OnCancelEvent()
+    {
+        nav.NavigateTo("/Videos/Index");
+    }
+
+}

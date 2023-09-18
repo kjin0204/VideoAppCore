@@ -33,5 +33,13 @@ namespace VideoAppCoreModels
         /// 비디오앱
         /// </summary>
         public DbSet<Video> Videos { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //[!] vidoes 테이블의 created,modified 열을 자동으로 GetDate() 제약 조건을 부여 함.
+            modelBuilder.Entity<Video>().Property(x => x.Created).HasDefaultValueSql("GetDate()");
+            modelBuilder.Entity<Video>().Property(x => x.Modified).HasDefaultValueSql("GetDate()");
+        }
     }
 }

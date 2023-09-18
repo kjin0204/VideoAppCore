@@ -42,6 +42,7 @@ namespace VideoAppCoreModels
             {
                 context.Videos.Remove(video);
             }
+            await context.SaveChangesAsync();
         }
 
         public async Task<Video> UpdateVideoAsync(Video model)
