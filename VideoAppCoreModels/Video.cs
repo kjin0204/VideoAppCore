@@ -1,4 +1,5 @@
-﻿using VideoAppCoreModels.Common;
+﻿using System.ComponentModel.DataAnnotations;
+using VideoAppCoreModels.Common;
 
 namespace VideoAppCoreModels
 {
@@ -20,6 +21,7 @@ namespace VideoAppCoreModels
         /// <summary>
         /// 강의 제목
         /// </summary>
+        [Required]
         public string Title { get; set; }
         /// <summary>
         /// 동영상 URL 경로

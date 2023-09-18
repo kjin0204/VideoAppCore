@@ -91,6 +91,10 @@ namespace VideoAppCoreModels
 
                 con.Open();
 
+                /*
+                 * dr.GetInt32(0); 첫번째 컬럼을 가지고 와서 int 형으로 변환
+                 * dr["url"] 컬럼명으로 데이터를 가지고 옴.
+                 */
                 SqlDataReader dr = await cmd.ExecuteReaderAsync();
                 while (dr.Read())
                 {
